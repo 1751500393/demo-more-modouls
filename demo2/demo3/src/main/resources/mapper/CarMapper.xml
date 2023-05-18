@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cen.demo.mapper.CarMapper">
+    <resultMap id="BaseResultMap" type="com.cen.demo.entity.Car">
+        <id property="carId" column="car_id"/>
+        <result property="carName" column="car_name"/>
+        <result property="uId" column="u_id"/>
+    </resultMap>
+    <insert id="insertCar">
+
+        insert into car(car_name,u_id) value(#{carName},#{uId})
+
+    </insert>
+    <select id="selectCarByUid" resultMap="BaseResultMap">
+
+        select car_id,car_name,u_id
+        from car
+
+        <where>
+            <if test="uId != null">
+                u_id=#{uId}
+            </if>
+        </where>
+    </select>
+</mapper>
