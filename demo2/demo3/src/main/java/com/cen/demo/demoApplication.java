@@ -3,7 +3,6 @@ package com.cen.demo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @SpringBootApplication
 //MapperScan指定当前项目中的Mapper接口路径位置.让mapper接口自动加载
