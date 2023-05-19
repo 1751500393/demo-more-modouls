@@ -1,0 +1,11 @@
+swagger:
+  title: My API Title
+  version: xxx
+  description: My API Description
+  termsOfService: API TOS
+  contact:
+    name: Your Name
+    url: www.example.com
+    email: your-email@example.com
+  license: License of API
+  licenseUrl: API license URL

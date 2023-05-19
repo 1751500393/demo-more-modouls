@@ -21,7 +21,6 @@ public class CarController {
     @GetMapping("/get/{uId}")
     @ApiOperation(value = "find car list", response = Car.class, responseContainer = "List", httpMethod = "GET")
     public List<Car> getCars(@PathVariable Integer uId) {
-
         return carService.getCarByUid(uId);
 
     }

@@ -6,7 +6,7 @@ spring:
     username: root
     password: 12345678
   profiles:
-    active: "dev"
+    active: dev,swagger,swapperproperties
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
