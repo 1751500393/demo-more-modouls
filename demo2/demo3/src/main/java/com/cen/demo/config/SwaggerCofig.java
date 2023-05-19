@@ -14,15 +14,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Collections;
 @EnableSwagger2
-@ComponentScan(basePackages = "com.cen.demo.controller")
-@ControllerAdvice(basePackages = "com.cen.demo.controller")
+//@ComponentScan(basePackages = "com.cen.demo.controller")
+//@ControllerAdvice(basePackages = "com.cen.demo.controller")
 @Configuration
 public class SwaggerCofig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.yourpackage"))
+                .apis(RequestHandlerSelectors.basePackage("com.cen.demo.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());
